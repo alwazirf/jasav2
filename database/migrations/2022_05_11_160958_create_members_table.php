@@ -38,13 +38,13 @@ return new class extends Migration
             $table->string('father_enc');
             $table->text('father_address');
             $table->string('father_place_of_born');
-            $table->date('father_date_of_born');
+            $table->date('father_date_of_born')->nullable()->default(null);
             $table->string('father_place_of_death');
             $table->date('father_date_of_death');
             $table->string('mother_name');
             $table->text('mother_address');
-            $table->string('mother_place_of_born');
-            $table->date('mother_date_of_born');
+            $table->string('mother_place_of_born')->nullable()->default(null);
+            $table->date('mother_date_of_born')->nullable()->default(null);
             $table->timestamps();
         });
     }

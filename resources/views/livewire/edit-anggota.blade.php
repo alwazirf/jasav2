@@ -1,4 +1,3 @@
-
 <div class="container-fluid py-4">
     <a href="/member-data" class="btn bg-gradient-primary btn-sm mb-4 mt-2 fa fa-arrow-left" type="button"> kembali</a>
         <div class="card">
@@ -80,8 +79,9 @@
                             <div class="form-group">
                                 <label for="district" class="form-control-label">{{ __('Kecamatan') }}</label>
                                 <select wire:model="district" name="district" class="form-select @error('district') is-invalid @enderror" aria-label="Default select example" required>
+
                                 @if($districts->count () == 0)
-                                <option value="">--Pilih Kabupaten Dulu--</option>
+                                    <option value="">--Pilih Kabupaten Dulu--</option>
                                 @endif
                                 @foreach ($districts as $district)
                                     <option value="{{ $district->id }}">{{ $district->name }}</option>

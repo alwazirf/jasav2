@@ -93,13 +93,13 @@ class TambahAnggota extends Component
             'father_enc' => 'required',
             'father_address' => 'required',
             'father_place_of_born' => 'required',
-            'father_date_of_born' => 'required',
+            'father_date_of_born' => '',
             'father_place_of_death' => 'required',
             'father_date_of_death' => 'required',
             'mother_name' => 'required',
             'mother_address' => 'required',
-            'mother_place_of_born' => 'required',
-            'mother_date_of_born' => 'required',
+            'mother_place_of_born' => '',
+            'mother_date_of_born' => '',
         ]);
 
         $filename = "";
@@ -148,7 +148,7 @@ class TambahAnggota extends Component
         session()->flash('message', 'Data telah tersimpan!');
         $this->resetInput();
 
-        redirect()->to('/member-management');
+        redirect()->to('/member-data');
         // $this->emit('memberStored', $member);
     }
 

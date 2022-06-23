@@ -143,8 +143,7 @@ body {
     @foreach($members as $member)
     @php $check++; @endphp
     <div class="column card" style="margin-bottom: 10px;" id="bg">
-        {{-- <div class="card has-bg-img" style="background-image: url(assets/img/depan.png)"> --}}
-        <img src="assets/img/depan.png" alt="" id="bg">
+        <img src="{{ url('assets/img/depan.png')}}" alt="" id="bg">
           <div class="text-tengah">
               <p style="text-transform: uppercase;">{{ $member->name }} BIN {{ $member->father_name }}</p>
               <p style="margin-top:-10px; text-transform: uppercase;">SANDI AYAH : {{ $member->father_enc }}</p>
@@ -153,12 +152,12 @@ body {
           @if($member->image)
           <img class="photo" src="{{ asset('storage/'. $member->image) }}" alt="" style="width:60px; height:70px">
           @else
-          <img class="photo" src="assets/img/no-image.png" alt="" style="width:60px; height:70px">
+          <img class="photo" src="{{ url('assets/img/no-image.png')}}" alt="" style="width:60px; height:70px">
           @endif
           <div class="label-jenis">
             <span class="label" style="font-size:25px; font-weight:bold; padding-top:10px">{{ $member->father_date_of_death <= "2005-08-31" ? 'A' : 'B' }}</span>
           </div>
-          <img class="barcode" src="assets/img/jasaqr.png" alt="" style="width:55px; height:55px; border: 1px solid black">
+          <img class="barcode" src="{{ url('assets/img/jasaqr.png')}}" alt="" style="width:55px; height:55px; border: 1px solid black">
           <div class="text-bawah">{{ $member->address }}, Kec. {{ $member->district->name }}, Kab. {{ $member->district->city->name }} - ACEH 24371</div>
         {{-- </div> --}}
     </div>

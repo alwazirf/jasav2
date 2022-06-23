@@ -5,7 +5,7 @@
                 <div class="col-xl-4 col-lg-5 col-md-6 d-flex flex-column mx-auto">
                     <div class="card card-plain mt-9">
                         <div class="card-header pb-0 text-left bg-transparent">
-                            <h3 class="font-weight-bolder text-primary text-gradient">{{ __("Assalamu'alaikum") }}</h3>
+                            <h3 class="font-weight-bolder text-primary">{{ __("Assalamu'alaikum") }}</h3>
                             <p class="mb-0">{{ __('Saleum Bandum Syedara')}}<br></p>
                         </div>
                         <div class="card-body">
@@ -38,7 +38,8 @@
                     </div>
                 </div>
                 <div class="col-md-6">
-                    <img class="d-none d-sm-block oblique-image bg-cover img-fluid mt-5" style="height:90%; padding-left:30%" src="../assets/img/curved-images/login.png" alt="">
+                    <img class="d-none d-sm-block oblique-image bg-cover img-fluid mt-5" style="height:90%; padding-left:10%; padding-top:10%" src="../assets/img/logos/icon.png" alt="">
+                    {{--  --}}
                 </div>
             </div>
         </div>

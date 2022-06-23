@@ -54,7 +54,7 @@ class EditAnggota extends Component
     {
         if (auth()->user()->is_admin == true) {
             $this->cities = City::all();
-            $this->districts = collect();
+            $this->districts = District::all();
         } else {
             $this->cities = auth()->user()->city;
             $this->districts = District::where('city_id', '=', auth()->user()->city->id)->get();
@@ -137,13 +137,13 @@ class EditAnggota extends Component
             'father_enc' => 'required',
             'father_address' => 'required',
             'father_place_of_born' => 'required',
-            'father_date_of_born' => 'required',
+            'father_date_of_born' => '',
             'father_place_of_death' => 'required',
             'father_date_of_death' => 'required',
             'mother_name' => 'required|max:255',
             'mother_address' => 'required',
-            'mother_place_of_born' => 'required',
-            'mother_date_of_born' => 'required',
+            'mother_place_of_born' => '',
+            'mother_date_of_born' => '',
         ]);
 
         $filename = "";

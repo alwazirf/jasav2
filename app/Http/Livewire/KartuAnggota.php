@@ -42,7 +42,7 @@ class KartuAnggota extends Component
     public function downloadPdf()
     {
         $members = ['members' => Member::with('district.city')->get()];
-        $pdf = PDF::loadView('livewire.kartu-anggota-pdf', $members)->setPaper('a4')->output();
+        $pdf = PDF::setOptions(['isHtml5ParserEnabled' => true, 'isRemoteEnabled' => true])->loadView('livewire.kartu-anggota-pdf', $members)->setPaper('a4')->output();
         return response()->streamDownload(
             fn () => print($pdf),
             "kartu-anggota.pdf"
